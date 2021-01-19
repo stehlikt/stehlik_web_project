@@ -19,3 +19,10 @@ di:
 
 services:
 	- App\Router\RouterFactory::createRouter
+	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])
+	- App\Model\User
+
+database:
+    dsn: 'mysql:host=127.0.0.1;dbname=stehlik_web'
+    user: root
+    password:
