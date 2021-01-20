@@ -1,0 +1,25 @@
+{block content}
+
+<p><a n:href="Posts:default">← zpět na výpis příspěvků</a></p>
+
+{if $user->isLoggedIn()}
+<a n:href='deletePost! $post->id'>Smazat příspěvek</a>
+{/if}
+
+<div class="date">{$post->created_at|date:'F j, Y'}</div>
+
+<h1 n:block="title">{$post->title}</h1>
+
+<div class="post">{$post->content}</div>
+
+{if $user->isLoggedIn()}
+{control commentForm}
+
+{foreach $comments as $comment}
+    <div>{$comment->name}</div>
+    <div>{$comment->content}</div>
+    <a n:href='deleteComment! $comment->id'>Smazat komentář</a>
+{/foreach}
+{else}
+<p>Pro přidávání komentářů se musíte <a n:href='Sign:in'>přihlásit</a></p>
+{/if}

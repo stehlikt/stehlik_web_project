@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Presenters;
 
-use App\Model\User;
+use App\Model\User\User;
 use Nette;
 use Nette\Application\UI\Form;
 use Nette\Security\Passwords;
 
 
-class RegisterPresenter extends BasePresenter
-{
+class RegisterPresenter extends BasePresenter{
+
     private $user;
     private $password;
 
@@ -31,7 +31,7 @@ class RegisterPresenter extends BasePresenter
         $form->addText('username','Přihlašovací jméno:')
             ->setCaption('Zadejte přihlašovací jméno')
             ->setRequired();
-        $form->addText('password','Heslo:')
+        $form->addPassword('password','Heslo:')
             ->setCaption('Zadejte heslo')
             ->setRequired();
         $form->addSubmit('Hotov');

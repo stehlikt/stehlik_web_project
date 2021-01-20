@@ -1,0 +1,20 @@
+{block content}
+
+<a n:href='Homepage:default'>Domů</a>
+<br>
+
+{if $user->isLoggedIn()}
+<a n:href='Posts:create'>Vytvořit příspěvěk</a>
+{else}
+<p>Pro přidávání příspěvků se musíte <a n:href='Sign:in'>přihlásit</a></p>
+{/if}
+
+{foreach $posts as $post}
+    <div>
+        <div>{$post->created_at|date:'F j, Y'}</div>
+
+        <h2><a n:href='Posts:show $post->id'>{$post->title}</a></h2>
+
+        <div>{$post->content}</div>
+    </div>
+{/foreach}

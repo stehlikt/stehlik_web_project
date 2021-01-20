@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\User;
 
 use Nette;
+use Nette\Security\SimpleIdentity;
 
 class User{
 
@@ -11,11 +12,10 @@ class User{
     public function __construct(Nette\Database\Connection $database)
     {
         $this->database = $database;
-
     }
 
-    public function insertUser($user){
-
+    public function insertUser($user)
+    {
         $this->database->query('INSERT INTO users',$user);
     }
 

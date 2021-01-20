@@ -1,8 +1,13 @@
 {block content}
 <ul>
-    <li><a href="#">Přihlášení</a></li>
-    <li><a n:href='Register:default'>Registrace</a></li>
-    <li><a href="#">Odhlášení</a></li>
-</ul>
 
+    <li><a n:href='Register:default'>Registrace</a></li>
+    {if $user->loggedIn}
+        <li><a n:href='Sign:out'>Odhlášení</a></li>
+    {else}
+        <li><a n:href='Sign:in'>Přihlášení</a></li>
+    {/if}
+    <li><a n:href='Posts:default'>Příspěvky</a></li>
+    <li><a n:href='MenuItems:default'>Dynamické položky menu</a></li>
+</ul>
 <div>Test website</div>
