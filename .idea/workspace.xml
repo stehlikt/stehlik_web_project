@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f76e7365-25aa-4bd2-9f5e-40ee7e2f411d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/MenuItems/MenuItemsRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Posts/Posts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/MenuItemsPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/PostsPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/MenuItems/default.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/create.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/default.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/edit.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/show.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stehlik_web_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stehlik_web_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/AdminPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Admin/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Register/Default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Register/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/config/common.neon" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +85,7 @@
       <workItem from="1611063591172" duration="136000" />
       <workItem from="1611063789195" duration="6480000" />
       <workItem from="1611091717874" duration="415000" />
-      <workItem from="1611092164835" duration="13981000" />
+      <workItem from="1611092164835" duration="16130000" />
     </task>
     <servers />
   </component>

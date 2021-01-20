@@ -2,12 +2,15 @@
 <ul>
 
     <li><a n:href='Register:default'>Registrace</a></li>
-    {if $user->loggedIn}
+    {if $user->isLoggedIn()}
         <li><a n:href='Sign:out'>Odhlášení</a></li>
     {else}
         <li><a n:href='Sign:in'>Přihlášení</a></li>
     {/if}
     <li><a n:href='Posts:default'>Příspěvky</a></li>
     <li><a n:href='MenuItems:default'>Dynamické položky menu</a></li>
+    {if $user->isLoggedIn()}
+        <li><a n:href='Admin:default'>Uživatelé</a></li>
+    {/if}
 </ul>
 <div>Test website</div>

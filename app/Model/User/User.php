@@ -14,9 +14,19 @@ class User{
         $this->database = $database;
     }
 
+    public function getAllUsers()
+    {
+        return $this->database->query('SELECT * FROM users')->fetchAll();
+    }
+
     public function insertUser($user)
     {
         $this->database->query('INSERT INTO users',$user);
+    }
+
+    public function deleteUser($id)
+    {
+        $this->database->query('DELETE FROM users WHERE id = ?',$id);
     }
 
 }
