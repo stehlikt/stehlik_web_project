@@ -3,7 +3,10 @@
 <p><a n:href="Posts:default">← zpět na výpis příspěvků</a></p>
 
 {if $user->isLoggedIn()}
-<a n:href='deletePost! $post->id'>Smazat příspěvek</a>
+    <div><a n:href='deletePost! $post->id'>Smazat příspěvek</a></div>
+{/if}
+{if $user->isLoggedIn()}
+    <div><a n:href='edit $post->id'>Editovat příspěvek</a></div>
 {/if}
 
 <div class="date">{$post->created_at|date:'F j, Y'}</div>

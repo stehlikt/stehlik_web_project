@@ -19,6 +19,11 @@ class User{
         return $this->database->query('SELECT * FROM users')->fetchAll();
     }
 
+    public function getUserByUsername($username)
+    {
+        return $this->database->query('SELECT * FROM users WHERE username = ?',$username);
+    }
+
     public function insertUser($user)
     {
         $this->database->query('INSERT INTO users',$user);

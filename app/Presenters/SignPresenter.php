@@ -36,9 +36,11 @@ class SignPresenter extends BasePresenter{
 
     public function signInFormSucceeded(Form $form, $values)
     {
+        $data = ['username' => $values->username, 'password' => $values->password];
+
         try {
-            $this->getUser()->login($values->username, $values->password);
-            $this->redirect('Homepage:');
+            $this->getUser()->login($data);
+            $this->redirect('Homepage:default');
 
         } catch (Nette\Security\AuthenticationException $e) {
             $form->addError('Nesprávné přihlašovací jméno nebo heslo.');
@@ -48,6 +50,6 @@ class SignPresenter extends BasePresenter{
     public function actionOut()
     {
         $this->getUser()->logout();
-        $this->redirect('Homepage:');
+        $this->redirect('Homepage:default');
     }
 }

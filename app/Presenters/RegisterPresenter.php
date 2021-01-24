@@ -49,7 +49,7 @@ class RegisterPresenter extends BasePresenter{
             'username' => $values->username,
             'email' => $values->email,
             'password' => $this->password->hash($values->password),
-            'role_id' => 3
+            'role' => 'user'
         ]);
 
         $this->flashMessage('Registrace proběhla v pořádku');

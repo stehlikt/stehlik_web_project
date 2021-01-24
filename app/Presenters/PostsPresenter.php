@@ -47,13 +47,31 @@ class PostsPresenter extends BasePresenter{
     public function addPostFormSucceeded(Form $form, $values)
     {
 
-        $this->posts->insertPost([
-            'title' => $values->title,
-            'content' => $values->content,
-            'user_id' => '1']);
+        $postId = $this->getParameter('postId');
 
-        $this->flashMessage('Příspěvěk byl úspěšně vytvořen');
-        $this->redirect('Posts:default');
+        if($postId)
+        {
+            $this->posts->updatePost($values,$postId);
+
+            $this->flashMessage('Příspěvěk byl úspěšně editovan');
+            $this->redirect('Posts:default');
+        }
+        else{
+            $this->posts->insertPost([
+                'title' => $values->title,
+                'content' => $values->content,
+                'user_id' => '1']);
+
+            $this->flashMessage('Příspěvěk byl úspěšně vytvořen');
+            $this->redirect('Posts:default');
+        }
+
+    }
+
+    public function actionEdit($postId)
+    {
+        $post = $this->posts->getPost($postId);
+        $this['addPostForm']->setDefaults($post);
     }
 
     public function handleDeletePost($postId)

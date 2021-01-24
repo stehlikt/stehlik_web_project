@@ -30,6 +30,11 @@ class Posts
         $this->database->query('INSERT INTO posts',$post);
     }
 
+    public function updatePost($post,$id)
+    {
+        $this->database->query('UPDATE posts SET title = ? , content = ? WHERE id = ?',$post['title'],$post['content'],$id);
+    }
+
     public function deletePost($id)
     {
         $this->database->query('DELETE FROM posts WHERE id = ?',$id);

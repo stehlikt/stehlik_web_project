@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f76e7365-25aa-4bd2-9f5e-40ee7e2f411d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/AdminPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Admin/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/AdminPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/BasePresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/@admin.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/MyAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteForms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/NetteForms.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Posts/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Posts/Posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/AdminPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/Error4xxPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/Error4xxPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/PostsPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostsPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Admin/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/Admin/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/edit.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/config/common.neon" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +69,26 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\stehlik_web_project\app" />
+      <recent name="C:\xampp\htdocs\stehlik_web_project\app\Model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\stehlik_web_project\app" />
+      <recent name="D:\xampp\htdocs\stehlik_web_project\app\FrontModule" />
       <recent name="C:\xampp\htdocs\stehlik_web_project\app\Model\User" />
       <recent name="C:\xampp\htdocs\stehlik_web_project\app\Model\Posts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\stehlik_web_project\app\Model" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,39 +108,22 @@
       <workItem from="1611063789195" duration="6480000" />
       <workItem from="1611091717874" duration="415000" />
       <workItem from="1611092164835" duration="16130000" />
+      <workItem from="1611444228005" duration="8578000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="-1244" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611106433057">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1244" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611106433057" />
-    <state x="541" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1611065384031" />
-    <state x="-1297" y="233" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611097019888">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1297" y="233" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611097019888" />
-    <state x="498" y="219" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1611088817756" />
-    <state x="-1230" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611096582025">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1230" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611096582025" />
-    <state x="-1234" y="211" key="FileChooserDialogImpl" timestamp="1611106315313">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1234" y="211" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611106315313" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1611064283664" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1611063726539">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1611063726539" />
-    <state x="-1143" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611104677878">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1143" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611104677878" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -23,6 +23,7 @@ services:
 	- App\Model\User\User
 	- App\Model\Posts\Posts
 	- App\Model\MenuItems\MenuItemsRepository
+	- App\components\MyAuthenticator
 
 database:
     dsn: 'mysql:host=127.0.0.1;dbname=stehlik_web'

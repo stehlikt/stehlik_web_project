@@ -7,6 +7,10 @@ use Nette\Application\UI;
 
 abstract class BasePresenter extends UI\Presenter{
 
+    public function startup()
+    {
+        parent::startup();
 
+    }
 
 }
