@@ -21,7 +21,7 @@
             <td>{$i->username}</td>
             <td>{$i->email}</td>
             <td>{if $i->role_id == 1}Admin {else} Uživatel{/if}</td>
-            <td><button><a n:href='deleteUser! $i->id'>Odstranit uživatele</a></button></td>
+            <td>{if $i->role_id == 1}Nemůžete odstranit uživatele s právy "Admin"{else}<button><a n:href='deleteUser! $i->id'>Odstranit uživatele</a>{/if}</button></td>
         </tr>
     {/foreach}
 </table>

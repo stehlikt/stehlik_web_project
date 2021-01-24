@@ -20,7 +20,7 @@ class MyAuthenticator implements Nette\Security\Authenticator
         $this->passwords = $passwords;
     }
 
-    public function authenticate(string $username, string $password): SimpleIdentity
+    public function authenticate(string $username, string $password): Nette\Security\IIdentity
     {
         $row = $this->database->table('users')
             ->where('username', $username)
@@ -36,7 +36,7 @@ class MyAuthenticator implements Nette\Security\Authenticator
 
         return new SimpleIdentity(
             $row->id,
-            $row->role, // nebo pole více rolí
+            $row->role_id,
             ['name' => $row->username]
         );
     }

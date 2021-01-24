@@ -22,7 +22,7 @@ class Posts
 
     public function getPost($id)
     {
-        return $this->database->query('SELECT * FROM posts WHERE id = ?',$id)->fetch();
+        return $this->database->query('SELECT p.id, p.title, p.content, p.created_at, p.user_id , u.id AS users , u.username FROM posts p INNER JOIN users u ON p.user_id = u.id WHERE p.id = ? ',$id)->fetch();
     }
 
     public function insertPost($post)

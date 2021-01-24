@@ -24,6 +24,11 @@ class User{
         return $this->database->query('SELECT * FROM users WHERE username = ?',$username);
     }
 
+    public function getUserRoleByUsername($username)
+    {
+        return $this->database->query('SELECT role_id FROM users WHERE username = ?',$username);
+    }
+
     public function insertUser($user)
     {
         $this->database->query('INSERT INTO users',$user);
