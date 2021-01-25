@@ -5,7 +5,8 @@ namespace App\Presenters;
 use Nette;
 use Nette\Application\UI;
 
-abstract class BasePresenter extends UI\Presenter{
+abstract class BasePresenter extends UI\Presenter
+{
 
     public function startup()
     {

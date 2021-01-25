@@ -12,11 +12,15 @@ abstract class BasePresenter extends UI\Presenter{
     {
         parent::startup();
 
-        if(!$this->user->isLoggedIn())
+        if($this->user->isLoggedIn() && $this->user->isInRole('admin'))
         {
-            $this->redirect('Admin:default');
+            $this->setLayout('admin');
         }
-        $this->setLayout('admin');
+        else
+        {
+            $this->redirect(':Homepage:default');
+        }
+
     }
 
 }

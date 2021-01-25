@@ -4,7 +4,7 @@ namespace App\Model\MenuItems;
 
 use Nette;
 
-class MenuItemsRepository
+class MenuItems
 {
     private $database;
 
@@ -18,9 +18,9 @@ class MenuItemsRepository
         return $this->database->query('SELECT * FROM menuItems')->fetchAll();
     }
 
-    public  function instertMenuItem(array $values)
+    public function instertMenuItem( $values)
     {
-        $this->database->query('INSERT INTO menuItems',$values);
+        $this->database->query('INSERT INTO menuItems', $values);
     }
 
 }

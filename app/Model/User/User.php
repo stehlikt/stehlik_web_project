@@ -5,7 +5,8 @@ namespace App\Model\User;
 use Nette;
 use Nette\Security\SimpleIdentity;
 
-class User{
+class User
+{
 
     private $database;
 
@@ -21,22 +22,28 @@ class User{
 
     public function getUserByUsername($username)
     {
-        return $this->database->query('SELECT * FROM users WHERE username = ?',$username);
+        return $this->database->query('SELECT * FROM users WHERE username = ?', $username);
     }
 
-    public function getUserRoleByUsername($username)
+    public function checkUsername($username)
     {
-        return $this->database->query('SELECT role_id FROM users WHERE username = ?',$username);
+        return $this->database->query('SELECT id FROM users WHERE username = ?', $username)->fetch();
+    }
+
+    public function checkEmail($email)
+    {
+        return $this->database->query('SELECT id FROM users WHERE email = ?', $email)->fetch();
     }
 
     public function insertUser($user)
     {
-        $this->database->query('INSERT INTO users',$user);
+        $this->database->query('INSERT INTO users', $user);
     }
 
     public function deleteUser($id)
     {
-        $this->database->query('DELETE FROM users WHERE id = ?',$id);
+        $this->database->query('DELETE FROM users WHERE id = ?', $id);
+        $this->database->query('DELETE FROM comments WHERE user_id = ?', $id);
     }
 
 }

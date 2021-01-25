@@ -1,20 +1,40 @@
 {block content}
+<div class="container">
 
-<a n:href='Homepage:default'>Domů</a>
-<br>
-
-{if $user->isLoggedIn()}
-<a n:href='Posts:create'>Vytvořit příspěvěk</a>
-{else}
-<p>Pro přidávání příspěvků se musíte <a n:href='Sign:in'>přihlásit</a></p>
-{/if}
+    {if $user->isLoggedIn()}
+        <button><a n:href='Posts:create'>Vytvořit příspěvěk</a></button>
+    {else}
+        <p>Pro přidávání příspěvků se musíte <a n:href='Sign:in'>přihlásit</a></p>
+    {/if}
 
 {foreach $posts as $post}
-    <div>
-        <div>{$post->created_at|date:'F j, Y'}</div>
+        <div>
 
-        <h2><a n:href='Posts:show $post->id'>{$post->title}</a></h2>
+            <div><h2><a n:href='Posts:show $post->id'>{$post->title}</a></h2></div>
 
-        <div>{$post->content}</div>
+            <div>Autor:{$post->username}</div>
+
+            <div>Datum:{$post->created_at|date:'F j, Y'}</div>
+
+            <div>{$post->content}</div>
+        </div>
+    {/foreach}
+
+    <div class="pagination">
+        {if !$paginator->isFirst()}
+            <a n:href="default, 1">První</a>
+            &nbsp;|&nbsp;
+            <a n:href="default, $paginator->page-1">Předchozí</a>
+            &nbsp;|&nbsp;
+        {/if}
+
+            Stránka {$paginator->getPage()} z {$paginator->getPageCount()}
+
+	{if !$paginator->isLast()}
+            &nbsp;|&nbsp;
+            <a n:href="default, $paginator->getPage() + 1">Další</a>
+            &nbsp;|&nbsp;
+            <a n:href="default, $paginator->getPageCount()">Poslední</a>
+        {/if}
     </div>
-{/foreach}
+</div>

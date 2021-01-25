@@ -1,27 +1,27 @@
 {block content}
-<a n:href=':Homepage:default'>Domů</a>
-<table>
-    <tr>
-        <th>
-            ID
-        </th>
-        <th>
-            Username
-        </th>
-        <th>
-            Email
-        </th>
-        <th>
-            Role
-        </th>
-    </tr>
-    {foreach $users as $i}
+<div class="container">
+    <h2>Tabulka uživatelů</h2>
+    <table class="table">
+        <thead>
         <tr>
-            <td>{$i->id}</td>
-            <td>{$i->username}</td>
-            <td>{$i->email}</td>
-            <td>{if $i->role_id == 1}Admin {else} Uživatel{/if}</td>
-            <td>{if $i->role_id == 1}Nemůžete odstranit uživatele s právy "Admin"{else}<button><a n:href='deleteUser! $i->id'>Odstranit uživatele</a>{/if}</button></td>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
         </tr>
-    {/foreach}
-</table>
+        </thead>
+        <tbody>
+        {foreach $users as $i}
+            <tr>
+                <td>{$i->id}</td>
+                <td>{$i->username}</td>
+                <td>{$i->email}</td>
+                <td>{$i->role}</td>
+                <td>{if $i->role == 'admin'}Nemůžete odstranit uživatele s právy "Admin"{else}
+                    <button><a n:href='deleteUser! $i->id'>Odstranit uživatele</a>{/if}</button>
+                </td>
+            </tr>
+        {/foreach}
+        </tbody>
+    </table>
+</div>

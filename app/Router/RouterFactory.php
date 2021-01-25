@@ -23,6 +23,7 @@ final class RouterFactory
         $router->addRoute('registrace','Register:default');
         $router->addRoute('prihlaseni','Sign:in');
         $router->addRoute('prispevky','Posts:default');
+        $router->addRoute('dynamicke-menu','MenuItems:default');
 		$router->addRoute('<presenter>/<action>[/<id>]', 'Homepage:default');
 
 		return $router;

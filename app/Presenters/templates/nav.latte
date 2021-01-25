@@ -1,13 +1,25 @@
-<ul>
-<h3>Navigace</h3>
-
-    {if $user->isLoggedIn()}
-        <li><a n:href='Sign:out'>Odhlášení</a></li>
-    {else}
-        <li><a n:href='Sign:in'>Přihlášení</a></li>
-        <li><a n:href='Register:default'>Registrace</a></li>
-    {/if}
-    <li><a n:href='Posts:default'>Příspěvky</a></li>
-    <li><a n:href='MenuItems:default'>Dynamické položky menu</a></li>
-
-</ul>
+<nav style="margin-bottom: 0 !important;" class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" n:href="Homepage:default">Tomáš Stehlík</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a n:href="Posts:default">Stránka s příspěvky</a></li>
+            <li><a n:href="MenuItems:default">Dynamické položky menu</a></li>
+            <li><a href="{$basePath}/cv/Stehlik_CV.pdf" target="_blank">CV</a></li>
+            {if $user->isInRole('admin')}
+                <li><a href="admin">Admin</a></li>
+            {/if}
+        </ul>
+        {if $user->isLoggedIn()}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a n:href="Sign:out"><span class="glyphicon glyphicon-log-out"></span> Odhlásit se</a></li>
+            </ul>
+        {else}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a n:href="Register:default"><span class="glyphicon glyphicon-user"></span> Registrace</a></li>
+                <li><a n:href="Sign:in"><span class="glyphicon glyphicon-log-in"></span> Přihlásit se</a></li>
+            </ul>
+        {/if}
+    </div>
+</nav>

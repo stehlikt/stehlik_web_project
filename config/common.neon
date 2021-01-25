@@ -22,7 +22,7 @@ services:
 	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])
 	- App\Model\User\User
 	- App\Model\Posts\Posts
-	- App\Model\MenuItems\MenuItemsRepository
+	- App\Model\MenuItems\MenuItems
 	- App\components\MyAuthenticator
 
 database:

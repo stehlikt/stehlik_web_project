@@ -10,7 +10,8 @@ use Nette\Application\UI\Form;
 use Nette\Security\Passwords;
 
 
-class RegisterPresenter extends BasePresenter{
+class RegisterPresenter extends BasePresenter
+{
 
     private $user;
     private $password;
@@ -25,35 +26,35 @@ class RegisterPresenter extends BasePresenter{
     {
         $form = new Form;
 
-        $form->addText('email', 'E-mail:')
-            ->setCaption('Zadejte svuj email.')
-            ->setRequired();
-        $form->addText('username','Přihlašovací jméno:')
-            ->setCaption('Zadejte přihlašovací jméno')
-            ->setRequired();
-        $form->addPassword('password','Heslo:')
-            ->setCaption('Zadejte heslo')
-            ->setRequired();
+        $form->addText('email', 'Zadejte svuj email: ')
+            ->setRequired('Vyplňte prosím svůj email');
+        $form->addText('username', 'Zadejte přihlašovací jméno: ')
+            ->setRequired('Vyplňte prosím své přihlašovací jméno');
+        $form->addPassword('password', 'Zadejte heslo:')
+            ->setRequired('Zadejte prosím heslo');
         $form->addSubmit('Hotov');
 
         $form->onSuccess[] = [$this, 'registerFormSucceeded'];
 
         return $form;
-
     }
 
     public function registerFormSucceeded(Form $form, $values)
     {
+        if ($this->user->checkEmail($values->email)) {
+            $this->flashMessage('Email je již obsazený');
+        } elseif ($this->user->checkUsername($values->username)) {
+            $this->flashMessage('Uživatelské jméno je již obsazeno');
+        } else {
+            $this->user->insertUser([
+                'username' => $values->username,
+                'email' => $values->email,
+                'password' => $this->password->hash($values->password),
+                'role' => 'user'
+            ]);
 
-        $this->user->insertUser([
-            'username' => $values->username,
-            'email' => $values->email,
-            'password' => $this->password->hash($values->password),
-            'role_id' => 2
-        ]);
-
-        $this->flashMessage('Registrace proběhla v pořádku');
-        $this->redirect('Homepage:default');
-
+            $this->flashMessage('Registrace proběhla v pořádku');
+            $this->redirect('Homepage:default');
+        }
     }
 }

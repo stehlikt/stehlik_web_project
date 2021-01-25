@@ -15,12 +15,13 @@ class MyAuthenticator implements Nette\Security\Authenticator
     public function __construct(
         Nette\Database\Explorer $database,
         Nette\Security\Passwords $passwords
-    ) {
+    )
+    {
         $this->database = $database;
         $this->passwords = $passwords;
     }
 
-    public function authenticate(string $username, string $password): Nette\Security\IIdentity
+    public function authenticate( $username,  $password): Nette\Security\IIdentity
     {
         $row = $this->database->table('users')
             ->where('username', $username)
@@ -36,7 +37,7 @@ class MyAuthenticator implements Nette\Security\Authenticator
 
         return new SimpleIdentity(
             $row->id,
-            $row->role_id,
+            $row->role,
             ['name' => $row->username]
         );
     }

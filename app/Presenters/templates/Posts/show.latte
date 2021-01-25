@@ -1,28 +1,50 @@
 {block content}
+<div class="container">
+    <button><a n:href="Posts:default">Zpět na výpis příspěvků</a></button>
 
-<p><a n:href="Posts:default">← zpět na výpis příspěvků</a></p>
-
+    {if $user->isLoggedIn()}
+        {if $user->isInRole('admin') || $user->getId() == $post->user_id}
+            <button><a n:href='deletePost! $post->id'>Smazat příspěvek</a></button>
+        {/if}
+    {/if}
 {if $user->isLoggedIn()}
-    <div><a n:href='deletePost! $post->id'>Smazat příspěvek</a></div>
-{/if}
-{if $user->isLoggedIn()}
-    <div><a n:href='edit $post->id'>Editovat příspěvek</a></div>
-{/if}
-<di>Uživatel: {$post->username}</di>
-<div class="date">{$post->created_at|date:'F j, Y'}</div>
+        {if $user->isInRole('admin') || $user->getId() == $post->user_id}
+            <button><a n:href='edit $post->id'>Editovat příspěvek</a></button>
+        {/if}
+    {/if}
 
 <h1 n:block="title">{$post->title}</h1>
 
-<div class="post">{$post->content}</div>
+
+    <div>Uživatel: {$post->username}</div>
+
+    <div class="date">Vytvořeno: {$post->created_at|date:'F j, Y'}</div>
+
+
+    <div class="post">{$post->content}</div>
+
+<br>
+<h3>Komentáře:</h3>
+    <br>
+{foreach $comments as $comment}
+        <div>
+            <div>{$comment->username}</div>
+            <div>{$comment->created_at}</div>
+            <div>{$comment->content}</div>
+        </div>
+        <br>
+        {if $user->isLoggedIn() && $user->isInRole('admin')}
+            <button><a n:href='deleteComment! $comment->id'>Smazat komentář</a></button>
+        {/if}
+    {/foreach}
 
 {if $user->isLoggedIn()}
-{control commentForm}
 
-{foreach $comments as $comment}
-    <div>{$comment->name}</div>
-    <div>{$comment->content}</div>
-    <a n:href='deleteComment! $comment->id'>Smazat komentář</a>
-{/foreach}
-{else}
-<p>Pro přidávání komentářů se musíte <a n:href='Sign:in'>přihlásit</a></p>
-{/if}
+
+        {control commentForm}
+
+    {else}
+        <p>Pro přidávání komentářů se musíte <a n:href='Sign:in'>přihlásit</a></p>
+    {/if}
+</div>
+
