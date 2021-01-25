@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f76e7365-25aa-4bd2-9f5e-40ee7e2f411d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/www/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/cv/Stehlik_CV.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/img/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AdminModule/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/@admin.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/@admin.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/Admin/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/AdminModule/Presenters/templates/Admin/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/MenuItems/MenuItemsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/MenuItems/MenuItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Posts/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Posts/Posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/MenuItemsPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/MenuItemsPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/PostsPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostsPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/create.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/create.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/edit.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/edit.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Posts/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Posts/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/nav.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/nav.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/MyAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MyAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +102,7 @@
       <workItem from="1611092164835" duration="16130000" />
       <workItem from="1611444228005" duration="14620000" />
       <workItem from="1611531547434" duration="15927000" />
-      <workItem from="1611547667708" duration="1298000" />
+      <workItem from="1611547667708" duration="1893000" />
     </task>
     <servers />
   </component>
